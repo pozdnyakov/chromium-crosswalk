@@ -1261,7 +1261,6 @@ void RenderProcessHostImpl::PropagateBrowserCommandLineToRenderer(
     switches::kDisableNotifications,
     switches::kDisableOverlayScrollbar,
     switches::kDisablePermissionsAPI,
-    switches::kDisablePresentationAPI,
     switches::kDisablePinch,
     switches::kDisablePrefixedEncryptedMedia,
     switches::kDisableRGBA4444Textures,
@@ -1414,6 +1413,8 @@ void RenderProcessHostImpl::PropagateBrowserCommandLineToRenderer(
     switches::kDisableDirectWrite,
     switches::kDisableWin32kRendererLockDown,
     switches::kTraceExportEventsToETW,
+#else
+    switches::kDisablePresentationAPI,
 #endif
 #if defined(USE_OZONE)
     switches::kOzonePlatform,
